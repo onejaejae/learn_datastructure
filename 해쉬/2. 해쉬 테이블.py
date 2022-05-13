@@ -21,4 +21,5 @@ def read_data(data):
 save_data('Dave', '01012341234')
 save_data('Andy', '01023456789')
 
+print(hash("adc"))
 print(read_data('Dave'))

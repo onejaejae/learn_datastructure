@@ -36,8 +36,8 @@ def palindrome2(str):
     
     if str[0] == str[-1]:
         return palindrome2(str[1:-1])
-    
-    return False
+    else:
+        return False
 
 
 print(palindrome('levedl'))

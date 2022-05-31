@@ -10,4 +10,4 @@ def dp(num):
     return cache[num] % 10007
 
 num = int(input())
-print(dp(num))
+print(dp(num)) 

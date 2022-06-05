@@ -1,6 +1,4 @@
 # 어떤 데이터리스트가 있을 때 리스트를 앞뒤로 짜르는 코드 작성해보기
-from turtle import right
-
 
 def split(data):
     medium = int(len(data) / 2)

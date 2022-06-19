@@ -15,7 +15,7 @@ for i in range(1, n+1): # 데이터 개수만큼 반복
         stack.pop()
         result.append("-")
     else: # 불가능한 경우
-        print("No")
+        print("NO")
         exit(0)
 
 print('\n'.join(result)) # 가능한 경우

@@ -1,5 +1,5 @@
-import sys
-sys.stdin = open("C:\workspaces\자료구조\유형별 문제 풀이\input.txt", "rt")
+# import sys
+# sys.stdin = open("C:\workspaces\자료구조\유형별 문제 풀이\input.txt", "rt")
 
 #나의 풀이
 # n = int(input())

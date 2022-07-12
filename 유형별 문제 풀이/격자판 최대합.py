@@ -21,9 +21,9 @@ sum1=sum2=0
 for i in range(n):
     sum1 += array[i][i]
     sum2 += array[i][n-1-i]
-    if largest < sum1:
-        largest = sum1
-    if largest < sum2:
-        largest = sum2 
+if largest < sum1:
+    largest = sum1
+if largest < sum2:
+    largest = sum2 
 
 print(largest)

@@ -7,22 +7,22 @@ result = 0
 
 for x in str:
     if x.isdecimal():
-        stack.append(x)
+        stack.append(int(x))
     else:
-        p1 = int(stack.pop())
-        p2 = int(stack.pop())
+        p1 = stack.pop()
+        p2 = stack.pop()
 
         if x == "+":
-            result = p1 + p2
+            result = p2 + p1
             stack.append(result)
         elif x == "-":
             result = p2 - p1
             stack.append(result)
         elif x == "*":
-            result = p1 * p2
+            result = p2 * p1
             stack.append(result)
         elif x == "/":
-            result = p1 // p2
+            result = p2 // p1
             stack.append(result)
 
 print(stack[0])

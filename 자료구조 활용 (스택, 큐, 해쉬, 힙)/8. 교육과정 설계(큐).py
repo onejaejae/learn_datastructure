@@ -23,3 +23,21 @@ for i in range(n):
         else:
             print("#%d YES" %(i+1))
     dq = deque(essential)
+
+# 해설 풀이
+need = input()
+
+for i in range(n):
+    plan = input()
+    dq = deque(need)
+
+    for x in plan:
+        if x in dq:
+            if x != dq.popleft():
+                print("#%d NO" %(i+1))
+                break
+    else:
+        if dq:
+            print("#%d NO" %(i+1))
+        else:
+            print("#%d YES" %(i+1))

@@ -26,7 +26,16 @@ n,m = map(int, input().split())
 #             m -= 1
 
 # 해설 풀이
-
+cnt = 0
 Q = [(pos, val) for pos, val in enumerate(list(map(int, input().split())))]
-print(Q)
-
+Q = deque(Q)
+while True:
+    cur = Q.popleft()
+    if any(cur[1]<x[1] for x in Q):
+        Q.append(cur)
+    else:
+        cnt += 1
+        if cur[0] == m:
+            break
+            
+print(cnt)

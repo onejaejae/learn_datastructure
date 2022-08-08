@@ -11,7 +11,6 @@ def solution(id_list, report, k):
         a,b = r.split()
         
         # user의 기본 값은 set
-        # set은 add를 사용해서 항목 추가, list는 append를 사용해서 항목 추가(defaultdict에서 제공)
         user[a].add(b)
         cnt[b] += 1
 

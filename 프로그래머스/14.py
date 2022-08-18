@@ -1,8 +1,6 @@
 cnt = 0
 def solution(n, k):
-    
     res = [0] * n
-
     def DFS(L):
         global cnt
         if L == 3:

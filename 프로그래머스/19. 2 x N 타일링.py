@@ -1,11 +1,13 @@
 def solution(n):
-    res = [1,2]
+    dp = [0 for i in range(n)]
+    dp[0] = 1
+    dp[1] = 2
 
-    for i in range(2, n+1):
-        res.append(res[i-2] + res[i-1])
+    for i in range(2, n):
+       dp[i] = (dp[i-1] + dp[i-2]) % 1000000007
 
 
-    return res[n-1]
+    return dp[n-1]
 
 
 print(solution(5))

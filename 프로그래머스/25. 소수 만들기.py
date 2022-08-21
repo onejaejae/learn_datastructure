@@ -34,8 +34,6 @@ def solution(nums):
                 break
         else:
             answer+=1
-
-
     return answer
 
 print(solution([1,2,7,6,4]))

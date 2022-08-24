@@ -11,6 +11,5 @@ def solution(n):
         if res[i] != 0:
             sum += (pow(3,j) * res[i])
         j+=1
-        
     return sum
 print(solution(125))

@@ -1,7 +1,10 @@
-def print_hello():
-    hello = 'Hello, world!'
-    def print_message():
-        print(hello)
-    print_message()
- 
-print_hello()
+res = ""
+word = "level"
+def is_palindrome(i):
+    if i == word:
+        return
+
+    is_palindrome(i-1)
+    res += word[i]
+
+print(is_palindrome(5))

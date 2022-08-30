@@ -1,5 +1,5 @@
-import sys
-sys.stdin = open("C:\workspaces\자료구조\DFS, BFS 활용\input.txt", "rt")
+# import sys
+# sys.stdin = open("C:\workspaces\자료구조\DFS, BFS 활용\input.txt", "rt")
 
 def DFS(L ,sum, time):
     global res

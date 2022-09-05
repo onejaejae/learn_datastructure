@@ -1,6 +1,7 @@
 import random
 import pymysql
 
+addrs = ['서울', '부산', '대구', '대전', '전주', '강원']
 fam_names = list("김이박최강고윤엄한배성백전황서천방지마피")
 first_names = list("건성현욱정민현주희진영래주동혜도모영진선재현호시우인성마무병별솔하라")
 alphas=list("abcdefghijklnmopqrstuvwxyz" * 3)
@@ -37,8 +38,9 @@ def make_data():
 
     tel = "010-{}-{}".format(nr(), nr())
     email = "{}@gmail.com".format(ar(random.randrange(3,9)))
+    addr = random.choice(addrs)
         
-    return (sung + name,tel,email, make_birth())
+    return (sung + name,tel,email, make_birth(), addr)
 
 data = []
 for i in range(0, 1000):
@@ -57,7 +59,7 @@ conn = pymysql.connect(
 
 with conn:
     cur = conn.cursor()
-    sql = "insert into Student(name, tel, email, birth) values(%s,%s,%s,%s)"
+    sql = "insert into Student(name, tel, email, birth, addr) values(%s,%s,%s,%s,%s)"
     cur.executemany(sql, data)
     print("AffectedRowCount is", cur.rowcount)
     conn.commit()

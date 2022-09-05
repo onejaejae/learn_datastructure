@@ -1,10 +1,4 @@
-res = ""
-word = "level"
-def is_palindrome(i):
-    if i == word:
-        return
+str = "김제모 이제모 박제모"
 
-    is_palindrome(i-1)
-    res += word[i]
-
-print(is_palindrome(5))
+str = str.replace("김제모", "구재모")
+print(str)
